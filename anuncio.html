@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="ad.size" content="width=300,height=250">
+  <title>Control de Gastos y Finanzas</title>
+  <script type="text/javascript">
+    var clickTag = "https://play.google.com/store/apps/details?id=com.sistemaswas.presupuestoycontroldegastos";
+    function exitHandler() {
+      window.open(clickTag, "_blank");
+    }
+  </script>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      width: 300px;
+      height: 250px;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(145deg, #0d1b2a, #1b263b);
+      color: #ffffff;
+      overflow: hidden;
+      cursor: pointer;
+      user-select: none;
+      border: 1px solid #415a77;
+    }
+    .container {
+      width: 100%;
+      height: 100%;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+    .badge {
+      align-self: flex-start;
+      background-color: rgba(0, 204, 136, 0.2);
+      color: #00cc88;
+      font-size: 11px;
+      font-weight: bold;
+      padding: 4px 8px;
+      border-radius: 4px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    .content h2 {
+      font-size: 19px;
+      line-height: 1.25;
+      font-weight: 700;
+      margin-top: 8px;
+      color: #ffffff;
+    }
+    .content p {
+      font-size: 13px;
+      line-height: 1.35;
+      color: #e0e1dd;
+      margin-top: 6px;
+    }
+    .cta-button {
+      background-color: #00cc88;
+      color: #0d1b2a;
+      text-align: center;
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: bold;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+      box-shadow: 0 4px 10px rgba(0, 204, 136, 0.3);
+    }
+    body:hover .cta-button {
+      background-color: #00b377;
+      transform: scale(1.02);
+    }
+    .footer-note {
+      font-size: 10px;
+      color: #778da9;
+      text-align: center;
+      margin-top: 4px;
+    }
+  </style>
+</head>
+<body onclick="exitHandler()">
+  <div class="container">
+    <span class="badge">100% Offline & Seguro</span>
+    <div class="content">
+      <h2>Control de Gastos y Finanzas</h2>
+      <p>Administra tu presupuesto, cuentas y gastos diarios sin planillas difíciles.</p>
+    </div>
+    <div>
+      <div class="cta-button">Instalar en Google Play</div>
+      <div class="footer-note">Sin contraseñas bancarias requeridas</div>
+    </div>
+  </div>
+</body>
+</html>
