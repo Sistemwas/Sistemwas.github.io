@@ -3,182 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistemas WAS | Desarrollo y Programación</title>
+    <title>Control de Gastos y Finanzas</title>
     <style>
-        /* Estilos generales */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f0f2f5;
             margin: 0;
-            padding: 0;
-            background-color: #f4f7f6;
-            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #1c1e21;
         }
-        
-        /* Encabezado */
-        header {
-            background-color: #004b87;
-            color: white;
-            padding: 40px 20px;
+        .card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 40px 24px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
             text-align: center;
+            max-width: 360px;
+            width: 90%;
         }
-        header img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid white;
-            margin-bottom: 15px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        .app-icon {
+            width: 96px;
+            height: 96px;
+            background-color: #4A3B8C;
+            border-radius: 22px;
+            margin: 0 auto 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 48px;
+            color: white;
+            box-shadow: 0 4px 10px rgba(74, 59, 140, 0.3);
         }
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-        header p {
-            font-size: 1.2em;
-            margin-top: 10px;
-            opacity: 0.9;
-        }
-
-        /* Contenedor principal */
-        .container {
-            max-width: 900px;
-            margin: -30px auto 40px;
-            padding: 30px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        /* Secciones */
-        h2 {
-            color: #004b87;
-            border-bottom: 2px solid #e1e8ed;
-            padding-bottom: 10px;
-            margin-top: 30px;
+        h1 {
+            font-size: 24px;
+            margin: 0 0 12px;
+            color: #000000;
         }
         p {
-            line-height: 1.6;
+            font-size: 16px;
+            color: #65676b;
+            margin: 0 0 32px;
+            line-height: 1.5;
         }
-
-        /* Cajas de especialidades */
-        .skills-grid {
-            display: flex;
-            gap: 20px;
-            margin-top: 20px;
-        }
-        .skill-box {
-            flex: 1;
-            padding: 20px;
-            background: #f8f9fa;
-            border-radius: 8px;
-            border-left: 4px solid #004b87;
-        }
-        .skill-box h3 {
-            margin-top: 0;
-            color: #333;
-        }
-
-        /* Botones */
-        .cta-section {
-            text-align: center;
-            margin-top: 40px;
-            padding: 30px;
-            background-color: #e9ecef;
-            border-radius: 8px;
-        }
-        .btn-youtube {
-            display: inline-block;
-            padding: 12px 25px;
-            background-color: #ff0000;
-            color: white;
+        .btn {
+            display: block;
+            background-color: #4A3B8C;
+            color: #ffffff;
             text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            font-size: 1.1em;
-            margin-top: 15px;
-            transition: background-color 0.3s;
+            font-size: 18px;
+            font-weight: 600;
+            padding: 16px;
+            border-radius: 12px;
+            transition: background-color 0.2s, transform 0.1s;
         }
-        .btn-youtube:hover {
-            background-color: #cc0000;
-        }
-
-        .btn-playstore {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #01875f; /* Color verde estilo Google Play */
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            font-size: 0.95em;
-            margin-top: 10px;
-            transition: background-color 0.3s;
-        }
-        .btn-playstore:hover {
-            background-color: #015c41;
-        }
-
-        /* Pie de página */
-        footer {
-            text-align: center;
-            padding: 20px;
-            color: #666;
-            font-size: 0.9em;
+        .btn:active, .btn:hover {
+            background-color: #362a6b;
         }
     </style>
 </head>
 <body>
-
-    <header>
-        <!-- IMPORTANTE: Reemplaza "mi-logo.png" por el nombre exacto de tu archivo de imagen subido a GitHub -->
-        <img src="logo.jpg" alt="Logo de Sistemas WAS">
-        <h1>Sistemas WAS</h1>
-        <p>Soluciones Informáticas, Desarrollo de Software y Tutoriales</p>
-    </header>
-
-    <div class="container">
-        <section>
-            <h2>Sobre Sistemas WAS</h2>
-            <p>Bienvenido a la página oficial de <strong>Sistemas WAS</strong>. Este espacio está dedicado a compartir conocimientos sobre el desarrollo de aplicaciones, programación y bases de datos. El objetivo principal es brindar herramientas y soluciones prácticas tanto en el desarrollo de software de escritorio como en aplicaciones móviles.</p>
-        </section>
-
-        <section>
-            <h2>Tecnologías y Especialidades</h2>
-            <div class="skills-grid">
-                <div class="skill-box">
-                    <h3>Desarrollo Móvil</h3>
-                    <p>Creación de aplicaciones para Android nativas utilizando <strong>Java y Android Studio</strong>. Migración de proyectos y optimización de código fuente.</p>
-                </div>
-                <div class="skill-box">
-                    <h3>Clarion & Bases de Datos</h3>
-                    <p>Desarrollo de sistemas complejos, arquitectura orientada a objetos en <strong>Clarion 9.1</strong> y generación eficiente de reportes para grandes volúmenes de datos.</p>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2>Proyectos y Aplicaciones</h2>
-            <ul>
-                <li>
-                    <strong style="color: navy;">Control de Gastos y Finanzas:</strong> Aplicación diseñada para la administración integral de finanzas personales.
-                    <br>
-                    <p style="margin-bottom: 5px;">Descarga la aplicación de manera gratuita y segura en la tienda oficial:</p>
-                    <a href="https://play.google.com/store/apps/details?id=com.sistemaswas.presupuestoycontroldegastos" target="_blank" class="btn-playstore">📱 Descargar en Google Play</a>
-                </li>
-            </ul>
-        </section>
-
-        <section class="cta-section">
-            <h2>Aprende y Únete a la Comunidad</h2>
-            <p>Encuentra guías paso a paso, análisis de código y soluciones prácticas de programación.</p>
-            <a href="https://www.youtube.com/@SistemasWAS" target="_blank" class="btn-youtube">▶ Visitar Canal de YouTube</a>
-        </section>
+    <div class="card">
+        <div class="app-icon">📊</div>
+        <h1>Control de Gastos y Finanzas</h1>
+        <p>La forma más rápida de registrar tus gastos diarios y organizar tu presupuesto.</p>
+        <a href="https://play.google.com/store/apps/details?id=com.sistemaswas.presupuestoycontroldegastos&referrer=utm_source%3Dfacebook%26utm_medium%3Dcpc%26utm_campaign%3Dvideo_combustible" class="btn">
+            Descargar GRATIS
+        </a>
     </div>
-
-    <footer>
-        <p>&copy; 2026 Sistemas WAS. Todos los derechos reservados.</p>
-    </footer>
-
 </body>
 </html>
