@@ -83,14 +83,17 @@
         .app-list {
             list-style: none;
             padding-left: 0;
+            margin: 20px 0;
         }
         .app-list > li {
             margin-bottom: 25px;
-            padding-bottom: 20px;
+            padding-bottom: 25px;
             border-bottom: 1px solid #edf2f7;
         }
         .app-list > li:last-child {
             border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 0;
         }
 
         /* Tarjeta con imagen */
@@ -117,18 +120,27 @@
         .app-info {
             flex: 1;
         }
+        .app-info h3 {
+            margin: 0 0 8px;
+            color: #004b87;
+            font-size: 1.25em;
+        }
+        .app-info p {
+            margin: 0 0 10px;
+            color: #4a5568;
+        }
 
         /* Responsividad para móviles */
-        @media (max-width: 600px) {
+        @media (max-width: 650px) {
             .app-card {
                 flex-direction: column;
                 align-items: flex-start;
             }
             .app-img-container img {
                 width: 100%;
-                max-width: 220px;
+                max-width: 200px;
                 height: auto;
-                margin-bottom: 10px;
+                margin-bottom: 12px;
             }
             .skills-grid {
                 flex-direction: column;
@@ -162,13 +174,13 @@
         .btn-playstore {
             display: inline-block;
             padding: 10px 20px;
-            background-color: #01875f; /* Color verde estilo Google Play */
+            background-color: #01875f; /* Color estilo Google Play */
             color: white;
             text-decoration: none;
             border-radius: 5px;
             font-weight: bold;
             font-size: 0.95em;
-            margin-top: 10px;
+            margin-top: 8px;
             transition: background-color 0.3s;
         }
         .btn-playstore:hover {
@@ -215,47 +227,74 @@
         <section>
             <h2>Proyectos y Aplicaciones</h2>
             <ul class="app-list">
-                <!-- Control de Gastos y Finanzas con Imagen -->
+                <!-- Control de Gastos y Finanzas -->
                 <li>
                     <div class="app-card">
                         <div class="app-img-container">
                             <img src="control-gastos.jpg" alt="Control de Gastos y Finanzas">
                         </div>
                         <div class="app-info">
-                            <strong style="color: navy; font-size: 1.1em;">Control de Gastos y Finanzas:</strong> 
-                            <p style="margin: 6px 0 10px;">Aplicación diseñada para la administración integral de finanzas personales. Permite un registro rápido y diario, categorías personalizadas y balances mensuales claros.</p>
+                            <h3>Control de Gastos y Finanzas</h3>
+                            <p>Aplicación diseñada para la administración integral de finanzas personales, registro rápido diario, categorías a medida y balances claros.</p>
                             <a href="https://play.google.com/store/apps/details?id=com.sistemaswas.presupuestoycontroldegastos" target="_blank" class="btn-playstore">📱 Descargar en Google Play</a>
                         </div>
                     </div>
                 </li>
 
+                <!-- Estudios Bíblicos Adventistas -->
                 <li>
-                    <p style="margin-bottom: 5px;">
-                    <strong style="color: navy;">Estudios Bíblicos Adventistas:</strong> La intención de esta aplicación es que los instructores bíblicos tengan en sus manos la posibilidad de compartir un estudio bíblico de forma sencilla, pero profunda. Cada uno de los 33 estudios tiene todas las citas bíblicas que se necesitan.
-                    <br>
-                    <p style="margin-bottom: 5px;">Descarga la aplicación de manera gratuita y segura en la tienda oficial:</p>
-                    <a href="https://play.google.com/store/apps/details?id=com.sistemaswas.estudiosbblicos" target="_blank" class="btn-playstore">📱 Descargar en Google Play</a>
+                    <div class="app-card">
+                        <div class="app-img-container">
+                            <img src="estudios-biblicos.jpg" alt="Estudios Bíblicos Adventistas">
+                        </div>
+                        <div class="app-info">
+                            <h3>Estudios Bíblicos Adventistas</h3>
+                            <p>Herramienta para compartir estudios bíblicos de forma sencilla y profunda. Incluye lecciones completas con referencias bíblicas integradas y funcionamiento sin conexión.</p>
+                            <a href="https://play.google.com/store/apps/details?id=com.sistemaswas.estudiosbblicos" target="_blank" class="btn-playstore">📱 Descargar en Google Play</a>
+                        </div>
+                    </div>
                 </li>
+
+                <!-- Recordatorio de Oración -->
                 <li>
-                    <p style="margin-bottom: 5px;">
-                    <strong style="color: navy;">Recordatorio de Oración:</strong> Recordatorio de Oración es una herramienta sencilla y práctica diseñada para ayudarte a mantener presente tu vida espiritual y organizar tu lista de intercesión.
-                    <br>
-                    <p style="margin-bottom: 5px;">Descarga la aplicación de manera gratuita y segura en la tienda oficial:</p>
-                    <a href="https://play.google.com/store/apps/details?id=com.sistemaswas.recordatoriodeoracion" target="_blank" class="btn-playstore">📱 Descargar en Google Play</a>
+                    <div class="app-card">
+                        <div class="app-img-container">
+                            <img src="recordatorio-oracion.jpg" alt="Recordatorio de Oración">
+                        </div>
+                        <div class="app-info">
+                            <h3>Recordatorio de Oración</h3>
+                            <p>Herramienta diseñada para acompañar tu vida espiritual, organizar listas de peticiones de intercesión y programar alarmas personalizadas.</p>
+                            <a href="https://play.google.com/store/apps/details?id=com.sistemaswas.recordatoriodeoracion" target="_blank" class="btn-playstore">📱 Descargar en Google Play</a>
+                        </div>
+                    </div>
                 </li>
+
+                <!-- Entrena con Mancuernas -->
                 <li>
-                    <p style="margin-bottom: 5px;">
-                    <strong style="color: navy;">Entrena con Mancuernas:</strong> Rutina completa de entrenamiento con mancuernas para el crecimiento muscular, dividida en cuatro días, con uno de descanso en medio.
-                    <br>
-                    <p style="margin-bottom: 5px;">Descarga la aplicación de manera gratuita y segura en la tienda oficial:</p>
-                    <a href="https://play.google.com/store/apps/details?id=com.sistemaswas.entrenaconmancuernas" target="_blank" class="btn-playstore">📱 Descargar en Google Play</a>
+                    <div class="app-card">
+                        <div class="app-img-container">
+                            <img src="entrena-mancuernas.jpg" alt="Entrena con Mancuernas">
+                        </div>
+                        <div class="app-info">
+                            <h3>Entrena con Mancuernas</h3>
+                            <p>Rutina progresiva de hipertrofia y acondicionamiento con mancuernas para casa o gimnasio, con control de descansos e historial de entrenamiento.</p>
+                            <a href="https://play.google.com/store/apps/details?id=com.sistemaswas.entrenaconmancuernas" target="_blank" class="btn-playstore">📱 Descargar en Google Play</a>
+                        </div>
+                    </div>
                 </li>
+
+                <!-- Stock Simple -->
                 <li>
-                    <p style="margin-bottom: 5px;">
-                    <strong style="color: navy;">Stock Simple:</strong> Aplicación para controlar el stock de tu negocio directamente desde tu celular.
-                    <br>
-                    <p style="margin-bottom: 5px;">Descarga la versión de prueba de manera gratuita y segura en la tienda oficial:</p>
-                    <a href="https://play.google.com/store/apps/details?id=com.sistemaswas.stocksimple" target="_blank" class="btn-playstore">📱 Descargar en Google Play</a>
+                    <div class="app-card">
+                        <div class="app-img-container">
+                            <img src="stock-simple.jpg" alt="Stock Simple">
+                        </div>
+                        <div class="app-info">
+                            <h3>Stock Simple</h3>
+                            <p>Gestión ágil de inventario y control de existencias desde el móvil con escáner de código de barras y avisos de stock mínimo.</p>
+                            <a href="https://play.google.com/store/apps/details?id=com.sistemaswas.stocksimple" target="_blank" class="btn-playstore">📱 Descargar en Google Play</a>
+                        </div>
+                    </div>
                 </li>  
             </ul>
         </section>
