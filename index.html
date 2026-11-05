@@ -79,6 +79,62 @@
             color: #333;
         }
 
+        /* Lista de aplicaciones */
+        .app-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .app-list > li {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #edf2f7;
+        }
+        .app-list > li:last-child {
+            border-bottom: none;
+        }
+
+        /* Tarjeta con imagen */
+        .app-card {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+        .app-img-container {
+            flex-shrink: 0;
+        }
+        .app-img-container img {
+            width: 140px;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 14px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+            display: block;
+            transition: transform 0.25s ease;
+        }
+        .app-img-container img:hover {
+            transform: scale(1.03);
+        }
+        .app-info {
+            flex: 1;
+        }
+
+        /* Responsividad para móviles */
+        @media (max-width: 600px) {
+            .app-card {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .app-img-container img {
+                width: 100%;
+                max-width: 220px;
+                height: auto;
+                margin-bottom: 10px;
+            }
+            .skills-grid {
+                flex-direction: column;
+            }
+        }
+
         /* Botones */
         .cta-section {
             text-align: center;
@@ -131,7 +187,6 @@
 <body>
 
     <header>
-        <!-- IMPORTANTE: Reemplaza "mi-logo.png" por el nombre exacto de tu archivo de imagen subido a GitHub -->
         <img src="logo.jpg" alt="Logo de Sistemas WAS">
         <h1>Sistemas WAS</h1>
         <p>Soluciones Informáticas, Desarrollo de Software y Tutoriales</p>
@@ -159,13 +214,21 @@
 
         <section>
             <h2>Proyectos y Aplicaciones</h2>
-            <ul>
+            <ul class="app-list">
+                <!-- Control de Gastos y Finanzas con Imagen -->
                 <li>
-                    <strong style="color: navy;">Control de Gastos y Finanzas:</strong> Aplicación diseñada para la administración integral de finanzas personales.
-                    <br>
-                    <p style="margin-bottom: 5px;">Descarga la aplicación de manera gratuita y segura en la tienda oficial:</p>
-                    <a href="https://play.google.com/store/apps/details?id=com.sistemaswas.presupuestoycontroldegastos" target="_blank" class="btn-playstore">📱 Descargar en Google Play</a>
+                    <div class="app-card">
+                        <div class="app-img-container">
+                            <img src="control-gastos.jpg" alt="Control de Gastos y Finanzas">
+                        </div>
+                        <div class="app-info">
+                            <strong style="color: navy; font-size: 1.1em;">Control de Gastos y Finanzas:</strong> 
+                            <p style="margin: 6px 0 10px;">Aplicación diseñada para la administración integral de finanzas personales. Permite un registro rápido y diario, categorías personalizadas y balances mensuales claros.</p>
+                            <a href="https://play.google.com/store/apps/details?id=com.sistemaswas.presupuestoycontroldegastos" target="_blank" class="btn-playstore">📱 Descargar en Google Play</a>
+                        </div>
+                    </div>
                 </li>
+
                 <li>
                     <p style="margin-bottom: 5px;">
                     <strong style="color: navy;">Estudios Bíblicos Adventistas:</strong> La intención de esta aplicación es que los instructores bíblicos tengan en sus manos la posibilidad de compartir un estudio bíblico de forma sencilla, pero profunda. Cada uno de los 33 estudios tiene todas las citas bíblicas que se necesitan.
